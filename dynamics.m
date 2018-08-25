@@ -2,7 +2,7 @@
 
 function out = dynamics(in)
 
-%///////////////////
+%%
 
 % constants file
 % INPUT: NaF
@@ -85,7 +85,7 @@ PArchim = rho*g*Vol;  % [N]
 
 
 
-%////////////
+%%
 
 
 %input states and omegas
