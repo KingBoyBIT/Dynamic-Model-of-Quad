@@ -54,3 +54,6 @@ PArchim = rho*g*Vol; % [N] ¿ÕÆø¸¡Á¦
 % ***** ANNEXE ! ******
 %Ftb=0.5*Cz*A*rho*v^2 % turbulent
 %Fl=16*0.3*nu*v % laminary 
+
+
+controlpara
