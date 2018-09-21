@@ -70,16 +70,17 @@ Zaa = (cos(pitch)*cos(roll))*(T(1)+T(2)+T(3)+T(4));
 Zaf = 0.5*Cz*A*rho*z_dot*abs(z_dot)*P + 0.5*Cz*Ac*rho*z_dot*abs(z_dot); 
 
 %outputs
-out(1) = roll_dot;
-out(2) = (Rbg + Rgp + Raa + Rhm + Rrm - Rfm) /Ixx;
-out(3) = pitch_dot;
-out(4) = (Pgb - Pgp + Paa - Phf + Prm - Pfm) /Iyy;
-out(5) = yaw_dot;
-out(6) = (Ygb + Yict +Yct + Yhfx + Yhfy) /Izz;
-out(7) = x_dot;
-out(8) = (Xaa - Xdf - Xhf)/m;
-out(9) = y_dot;
-out(10) = (Yaa - Ydf - Yhf) / m;
-out(11) = z_dot;
-out(12) = -g + (Zaa - Zaf)/m;
+out(1) = x_dot;
+out(2) = (Xaa - Xdf - Xhf)/m;
+out(3) = y_dot;
+out(4) = (Yaa - Ydf - Yhf) / m;
+out(5) = z_dot;
+out(6) = -g + (Zaa - Zaf)/m;
+out(7) = roll_dot;
+out(8) = (Rbg + Rgp + Raa + Rhm + Rrm - Rfm) /Ixx;
+out(9) = pitch_dot;
+out(10) = (Pgb - Pgp + Paa - Phf + Prm - Pfm) /Iyy;
+out(11) = yaw_dot;
+out(12) = (Ygb + Yict +Yct + Yhfx + Yhfy) /Izz;
+
 
