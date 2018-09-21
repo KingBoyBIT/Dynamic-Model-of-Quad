@@ -43,8 +43,8 @@ RRy = zeros(4,1);
 
 for(i=1:4)
 T(i) = Ct*rho*A*((omega(i)*R)^2); %推力
-Hx(i) = ChX*rho*A*((omega(i)*R)^2); %x方向轴向力
-Hy(i) = ChY*rho*A*((omega(i)*R)^2); %y方向轴向力
+Hx(i) = ChX*rho*A*((omega(i)*R)^2); %x方向径向力
+Hy(i) = ChY*rho*A*((omega(i)*R)^2); %y方向径向力
 Q(i) = Cq*rho*A*((omega(i)^2)*(R)^3); %阻力 
 RRx(i) = CrX*rho*A*((omega(i)^2)*(R)^3); %x方向滚转力矩分量
 RRy(i) = CrY*rho*A*((omega(i)^2)*(R)^3); %y方向滚转力矩分量
