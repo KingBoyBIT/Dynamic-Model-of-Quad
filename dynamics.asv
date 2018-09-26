@@ -57,42 +57,30 @@ Om_old=Om;
 
 % X forces
 Xaa = (sin(yaw)*sin(roll)+cos(yaw)*sin(pitch)*cos(roll))*(T(1)+T(2)+T(3)+T(4)); 
-% Xdf = 0.5*Cx*Ac*rho*x_dot*abs(x_dot); 
-% Xhf = Hx(1)+Hx(2)+Hx(3)+Hx(4);
+Xdf = 0.5*Cx*Ac*rho*x_dot*abs(x_dot); 
+Xhf = Hx(1)+Hx(2)+Hx(3)+Hx(4);
 
  % Y forces
 Yaa = (-cos(yaw)*sin(roll)+sin(yaw)*sin(pitch)*cos(roll))*(T(1)+T(2)+T(3)+T(4)); 
-% Ydf = 0.5*Cy*Ac*rho*y_dot*abs(y_dot); 
-% Yhf = Hy(1)+Hy(2)+Hy(3)+Hy(4); 
+Ydf = 0.5*Cy*Ac*rho*y_dot*abs(y_dot); 
+Yhf = Hy(1)+Hy(2)+Hy(3)+Hy(4); 
 
 % Z forces
 Zaa = (cos(pitch)*cos(roll))*(T(1)+T(2)+T(3)+T(4));              
-% Zaf = 0.5*Cz*A*rho*z_dot*abs(z_dot)*P + 0.5*Cz*Ac*rho*z_dot*abs(z_dot); 
+Zaf = 0.5*Cz*A*rho*z_dot*abs(z_dot)*P + 0.5*Cz*Ac*rho*z_dot*abs(z_dot); 
 
 %outputs
-% out(1) = x_dot;
-% out(2) = (Xaa - Xdf - Xhf)/m;
-% out(3) = y_dot;
-% out(4) = (Yaa - Ydf - Yhf) / m;
-% out(5) = z_dot;
-% out(6) = -g + (Zaa - Zaf)/m;
-% out(7) = roll_dot;
-% out(8) = (Rbg + Rgp + Raa + Rhm + Rrm - Rfm) /Ixx;
-% out(9) = pitch_dot;
-% out(10) = (Pgb - Pgp + Paa - Phf + Prm - Pfm) /Iyy;
-% out(11) = yaw_dot;
-% out(12) = (Ygb + Yict +Yct + Yhfx + Yhfy) /Izz;
 out(1) = x_dot;
-out(2) = (Xaa)/m;
+out(2) = (Xaa - Xdf - Xhf)/m;
 out(3) = y_dot;
-out(4) = (Yaa) / m;
+out(4) = (Yaa - Ydf - Yhf) / m;
 out(5) = z_dot;
-out(6) = -g + (Zaa)/m;
+out(6) = -g + (Zaa - Zaf)/m;
 out(7) = roll_dot;
-out(8) = (Rbg + Raa) /Ixx;
+out(8) = (Rbg + Rgp + Raa + Rhm + Rrm - Rfm) /Ixx;
 out(9) = pitch_dot;
-out(10) = (Pgb + Paa) /Iyy;
+out(10) = (Pgb - Pgp + Paa - Phf + Prm - Pfm) /Iyy;
 out(11) = yaw_dot;
-out(12) = (Ygb +Yct) /Izz;
+out(12) = (Ygb + Yict +Yct + Yhfx + Yhfy) /Izz;
 
 

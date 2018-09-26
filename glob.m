@@ -5,3 +5,4 @@ clear,clc,close all
 global Om_old;
 Om_old = 0;
 constant
+
